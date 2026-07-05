@@ -1,2 +1,2 @@
-# beginner-programs-of-while-loops
+# beginner-programs-using-loops-in-python
 simple programs using while loop to build your foundation
