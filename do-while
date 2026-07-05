@@ -1,0 +1,102 @@
+Python programs demonstrating do-while loop logic using while True and break, with beginner-friendly practice problems.
+
+#print 1 to 10
+i = 1
+
+while True:
+  print(i)
+  i+=1
+
+  if i>10:
+    break
+
+#mulyiplication table
+n = int(input("Enter a number: "))
+
+i=1
+
+while True:
+  print(f"{n} x {i} = {n*i}")
+  i+=1
+
+  if i>10:
+    break
+
+# keep taking numbers until 0 is entered,then print sum 
+
+total = 0
+
+while True:
+  num = int(input("enter number: "))
+
+  if num==0:
+    break
+  
+  total+=num
+
+print("Sum = ",total)
+
+# keep taking numbers until 0 is entered,then print the largest number
+
+largest = None
+
+while True:
+  num = int(input("enter number: "))
+
+  if num==0:
+    break
+  
+  if largest is None or num>largest:
+    largest = num
+
+print("Largest = ",largest)
+
+#count the number of digits
+
+n = int(input("Enter a number: "))
+
+count=0
+
+while True:
+  count+=1
+  n//=10
+  if n==0:
+    break
+
+
+print("Digits = ",count)
+
+#Reverse a number
+
+n = int(input("enter a number: "))
+
+rev = 0
+
+while True:
+  digits=n%10
+  rev=rev*10 +digits 
+  n//=10
+
+  if n==0:
+    break
+
+print("Reverse is ",rev)
+
+#Palindrome
+n = int(input("enter a number: "))
+temp=n
+rev = 0
+
+while True:
+  digits=n%10
+  rev=rev*10 +digits 
+  n//=10
+
+
+  if n==0:
+    break
+
+if temp==rev:
+  print("Palindrome")
+else:
+  print("Not Palindrome")
