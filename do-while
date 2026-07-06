@@ -100,3 +100,146 @@ if temp==rev:
   print("Palindrome")
 else:
   print("Not Palindrome")
+
+
+#armstrong nuber
+n = int(input("enter a number: "))
+temp = n
+digits = len(str(n))
+total = 0
+
+while True:
+  digit = n%10
+  total+=digit**digits
+  n//=10
+
+  if n==0:
+    break
+
+if total == temp:
+  print("Armstrong")
+else:
+  print("Not Armstrong")
+
+#factorial
+n = int(input("enter a number: "))
+fact = 1
+i=1
+
+while True:
+  fact*=i
+  i+=1
+
+  if i>n:
+    break
+
+print("Factorial = ",fact)
+
+#fibonacci
+n = int(input("enter a number: "))
+a=0
+b=1
+count = 1
+
+while True:
+  print(a, end="")
+  c=a+b
+  a=b
+  b=c
+  
+
+  count+=1
+  if count>n:
+    break
+
+  #HCF
+a=int(input("Enter a number: "))
+b=int(input("Enter a number: "))
+small = min(a,b)
+hcf = 1
+
+while True:
+  if a%small==0 and b%small==0:
+    hcf = small
+    break
+  small-=1
+
+print("HCF is",hcf)
+
+
+#Menu driven program
+while True:
+  print("\n1.ADD")
+  print("2. Subtract")
+  print("3. Exit")
+
+  choice = int(input("Enter your choice: "))
+
+  if choice==1:
+    a=int(input("Enter a number: "))
+    b=int(input("Enter a number: "))
+    print("Sum = ",a+b)
+  
+  elif choice==2:
+    a=int(input("Enter a number: "))
+    b=int(input("Enter a number: "))
+    print("Difference = ",a-b)
+
+  elif choice==3:
+    print("Thank you")
+    break
+
+  else:
+    print("Invalid choice")
+
+#count positive numbers untial a negative number is entered
+
+count = 0
+
+while True:
+  n=int(input("enter a number: "))
+
+  if n<0:
+    break
+
+  elif n>0:
+    count+=1
+  
+print("Positive numbers are =",count)
+
+#sum of digits
+
+n=int(input("enter a number: "))
+total = 0
+
+while True:
+  digit = n%10
+  total+=digit
+  n//=10
+
+  if n==0:
+    break
+
+print("Sum = ",total)
+
+#Sum of even digits and sum of odd digits
+
+n=int(input("enter a number:"))
+even_total = 0
+odd_total = 0
+
+while True:
+  digits = n%10
+  if digits%2==0:
+    even_total+=digits
+  else:
+    odd_total+=digits
+
+  n//=10
+
+  if n==0:
+    break
+
+print("Even total = ",even_total)
+print("Odd total = ",odd_total)
+
